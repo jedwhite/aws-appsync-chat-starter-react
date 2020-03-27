@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { searchMessages, searchUsers } from '../graphql/queries'
-import { graphql, compose } from 'react-apollo'
+import { graphql } from 'react-apollo'
+import * as compose from 'lodash.flowright';
 import BarLoader from 'react-spinners/BarLoader'
 import moment from 'moment'
 

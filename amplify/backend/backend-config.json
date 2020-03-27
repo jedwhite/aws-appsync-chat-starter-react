@@ -1,0 +1,33 @@
+{
+	"auth": {
+		"awschat3821f02e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"api": {
+		"awschat": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authawschat3821f02e"
+						}
+					}
+				}
+			}
+		}
+	},
+	"storage": {
+		"awschat": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
